@@ -1,5 +1,3 @@
-
-
 const BASE_URL = 'https://api.thecatapi.com/v1';
 const API_KEY = 'live_b81K7BzuDEA8swj2RedgfBjdwI60KdZF8WX37AknRgz0KNZAvL9l6pTURqzcmHR9';
                
