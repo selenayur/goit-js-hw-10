@@ -1,92 +1,85 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  justify-content: center;
+}
+
+.container-info {
+  display: flex;
+  gap: 20px;
+}
+
+.text-information {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 600px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.text_temp {
+  font-weight: 400;
+}
+
+.breed-select {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.loader {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: blue;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+      box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
   }
-  
-  .loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -24px;
-    margin-top: -24px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: inline-block;
-    border: 3px solid;
-    border-color: transparent transparent #ff3d00 #ff3d00;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+
+  33% {
+      box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
   }
-  .loader::after,
-  .loader::before {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border: 3px solid;
-    border-color: transparent transparent #ff3d00 #ff3d00;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    animation: rotationBack 0.5s linear infinite;
-    transform-origin: center center;
+
+  66% {
+      box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
   }
-  .loader::before {
-    width: 32px;
-    height: 32px;
-    border-color: #63ccca #63ccca transparent transparent;
-    animation: rotation 1.5s linear infinite;
+
+  100% {
+      box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
   }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes rotationBack {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-  
-  /* // LOADER // */
-  
-  .hidden {
-    display: none;
-  }
-  
-  span {
-    font-weight: 600;
-  }
-  
-  .breed-select {
-    margin-bottom: 20px;
-  }
-  
-  .cat-info {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .info-wrapper {
-    max-width: 600px;
-  }
-  
-  .cat-img {
-    margin-right: 20px;
-  }
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
