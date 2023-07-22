@@ -39,7 +39,6 @@ img {
 .description {
     padding-top: 20px;
 }
-
 .loader {
   content: " ";
   width: 12px;
@@ -52,6 +51,7 @@ img {
   box-sizing: border-box;
   animation: animloader 1s linear infinite alternate;
 }
+
 
 @keyframes animloader {
   0% {
